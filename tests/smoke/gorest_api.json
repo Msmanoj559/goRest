@@ -30,14 +30,16 @@
 							"    pm.response.to.have.status(\"Created\");\r",
 							"});\r",
 							"\r",
-							"\r",
-							"\r",
 							"var jsonData = JSON.parse(responseBody);\r",
 							"pm.test(\"Gender is Correct\", function()\r",
 							"{\r",
 							"const expectGender=\"male\";\r",
 							"var gender=jsonData.gender;\r",
 							"pm.expect(gender).to.equals(expectGender);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
 							"});\r",
 							""
 						],
@@ -68,7 +70,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "27bec7d3c3347bf607e7afee512672d747ecfc91f8810c8022d560511c36850e",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -105,22 +107,14 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"test\", function()\r",
+							"pm.test(\"Musr have Status code 200\", function()\r",
 							"{\r",
 							"    pm.response.to.have.status(200);\r",
 							"}\r",
 							");\r",
 							"\r",
 							"\r",
-							"\r",
-							"pm.test(\"test 2\", ()=>\r",
-							"{\r",
-							"pm.expect(pm.response.code).to.be.oneOf([200,201]);\r",
-							"})\r",
-							"\r",
-							"\r",
-							"\r",
-							"pm.test(\"text\", () =>\r",
+							"pm.test(\"Ok text present\", () =>\r",
 							"{\r",
 							"pm.response.to.have.status(\"OK\");\r",
 							"});"
@@ -137,7 +131,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "27bec7d3c3347bf607e7afee512672d747ecfc91f8810c8022d560511c36850e",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -167,7 +161,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "27bec7d3c3347bf607e7afee512672d747ecfc91f8810c8022d560511c36850e",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
@@ -222,7 +216,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "27bec7d3c3347bf607e7afee512672d747ecfc91f8810c8022d560511c36850e",
+							"value": "{{token}}",
 							"type": "string"
 						}
 					]
