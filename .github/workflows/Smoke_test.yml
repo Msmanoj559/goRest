@@ -26,8 +26,10 @@ jobs:
     - name: Install Newman
       run: npm install -g newman
 
-    - name: Run Smoke Tests
-      run: |
-        newman run tests/smoke/gorest_api.json \
-        -e tests/smoke/gorestApi-stg-env.json \
-        --reporters cli
+- name: Run Smoke Tests
+  run: |
+    newman run tests/smoke/collection.json \
+    -e tests/smoke/environment.json \
+    --env-var token=${{ secrets.GOREST_TOKEN }} \
+    --reporters cli
+
