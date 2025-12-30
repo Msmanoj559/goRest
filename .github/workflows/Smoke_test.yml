@@ -28,6 +28,6 @@ jobs:
 
     - name: Run Smoke Tests
       run: |
-        newman run tests/smoke/collection.json \
-        -e tests/smoke/environment.json \
+        newman run tests/smoke/gorest_api.json \
+        -e tests/smoke/gorestApi-stg-env.json \
         --reporters cli
