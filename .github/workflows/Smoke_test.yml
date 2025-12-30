@@ -3,8 +3,7 @@ name: API Smoke Tests
 on:
   push:
     branches:
-      - main
-      - develop
+      - dev
 
 jobs:
   smoke-test:
