@@ -1,40 +1,16 @@
 {
-	"id": "4b9151ed-5167-45de-a82f-d7083bfb500b",
-	"name": "gorestApi - Staging",
+	"id": "0c65bafc-4907-41f1-a8bc-87bbcbdd8275",
+	"name": "gorestApi-Dev",
 	"values": [
 		{
 			"key": "BASE_URL",
-			"value": "https://gorest.co.in",
-			"type": "default",
-			"enabled": true
-		},
-		{
-			"key": "uname",
-			"value": "",
-			"type": "any",
-			"enabled": true
-		},
-		{
-			"key": "uemail",
-			"value": "",
-			"type": "any",
-			"enabled": true
-		},
-		{
-			"key": "uid",
-			"value": "",
-			"type": "any",
-			"enabled": true
-		},
-		{
-			"key": "token",
-			"value": "",
+			"value": "https://jsonplaceholder.typicode.com",
 			"type": "default",
 			"enabled": true
 		}
 	],
 	"color": null,
 	"_postman_variable_scope": "environment",
-	"_postman_exported_at": "2025-12-30T19:28:33.975Z",
+	"_postman_exported_at": "2025-12-31T18:21:25.351Z",
 	"_postman_exported_using": "Postman/11.77.2"
 }
