@@ -1,0 +1,29 @@
+name: API Smoke Tests
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install Newman
+        run: npm install -g newman
+
+      - name: Run Smoke Tests
+        run: |
+          newman run tests/smoke/gorest_api.json \
+            -e tests/smoke/gorestApi-stg-env.json \
+            --env-var token=${{ secrets.GOREST_TOKEN }} \
+            --reporters cli
