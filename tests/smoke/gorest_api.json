@@ -91,6 +91,10 @@
 							"\r",
 							"pm.test(\"Status code name has OK string\", function () {\r",
 							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
 							"});"
 						],
 						"type": "text/javascript",
@@ -111,6 +115,14 @@
 						"albums"
 					]
 				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_photos",
+			"request": {
+				"method": "GET",
+				"header": []
 			},
 			"response": []
 		}
